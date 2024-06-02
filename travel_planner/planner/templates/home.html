@@ -1,0 +1,23 @@
+<!-- planner/templates/planner/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Planner Home</title>
+</head>
+<body>
+    <h1>Welcome to Travel Planner Crew!</h1>
+    <form action="{% url 'plan_travel' %}" method="post">
+        {% csrf_token %}
+        <label for="location">Your current city:</label><br>
+        <input type="text" id="location" name="location"><br>
+        <label for="cities">Cities you want to visit:</label><br>
+        <input type="text" id="cities" name="cities"><br>
+        <label for="date_range">Travel dates:</label><br>
+        <input type="text" id="date_range" name="date_range"><br>
+        <label for="interests">Your interests:</label><br>
+        <input type="text" id="interests" name="interests"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
